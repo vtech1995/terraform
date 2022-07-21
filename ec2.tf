@@ -3,7 +3,7 @@
    instance_type = var.instancetype
    subnet_id = aws_subnet.public_subnet.1.id
    vpc_security_group_ids = ["${aws_security_group.ec2-sg.id}"]
-   associate_public_ip_address = "flase"
+   associate_public_ip_address = "false"
    key_name  = var.key_name
    user_data = <<EOF
     #!/bin/bash
