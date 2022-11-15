@@ -5,7 +5,7 @@ resource "aws_instance" "ec2" {
    vpc_security_group_ids = ["${aws_security_group.ec2-sg.id}"]
    associate_public_ip_address = "false"
    key_name  = var.key_name
-   iam_instance_profile = "AmazonSSMRoleForInstancesQuickSetup" 
+   #iam_instance_profile = "AmazonSSMRoleForInstancesQuickSetup" 
    user_data = <<EOF
     #!/bin/bash
     sudo yum install git -y
